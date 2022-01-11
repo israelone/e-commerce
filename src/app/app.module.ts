@@ -7,6 +7,7 @@ import { MainComponent } from './components/main/main.component';
 import { DescriptionComponent } from './components/main/description/description.component';
 import { PictureComponent } from './components/main/picture/picture.component';
 import { NavigationComponent } from './components/main/navigation/navigation.component';
+import { ContentComponent } from './components/main/content/content.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavigationComponent } from './components/main/navigation/navigation.com
     MainComponent,
     DescriptionComponent,
     PictureComponent,
-    NavigationComponent
+    NavigationComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
