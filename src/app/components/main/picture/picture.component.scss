@@ -1,9 +1,22 @@
-img {
+section{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+img{
+  border-radius: 18px;
+}
+
+#main-image {
+  width: 380px;
 }
 
 .thumbnail {
-  border-radius: 18px;
+
   cursor: pointer;
+  width: 82px;
 }
 
 .selected {
@@ -12,4 +25,11 @@ img {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+div{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 380px;
 }
