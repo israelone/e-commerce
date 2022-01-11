@@ -1,0 +1,15 @@
+img {
+}
+
+.thumbnail {
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.selected {
+  opacity: 0.8;
+  border: 4px solid orange;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
