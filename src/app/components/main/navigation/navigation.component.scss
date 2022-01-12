@@ -2,17 +2,47 @@ nav {
   display: flex;
   width: 80%;
   margin: 0 auto;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #cbcbcb;
+  height: 80px;
+  #logo{
+    height: 20px;
+    margin: auto 0;
+  }
   ul {
     list-style: none;
+    display: flex;
+    align-items: center;
+    margin:0;
     li {
-      display: inline;
+      display: flex;
+      height: 100%;
       margin: 0 10px;
+      color: gray;
+      cursor: pointer;
+      align-items:center;
+      &:hover{
+        border-bottom: 4px solid orange;
+        margin-bottom: -1px;
+      }
     }
   }
 
   #avatar {
     width: 40px;
     height: 40px;
+  }
+
+  #left-section{
+    margin-left: auto;
+    display: flex;
+    align-items: center;}
+}
+
+#avatar{
+  margin-left: 20px;
+  cursor: pointer;
+  &:hover{
+        border-radius: 100%;
+        outline: 2px solid orange;
   }
 }
