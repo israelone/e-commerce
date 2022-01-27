@@ -1,0 +1,43 @@
+.item-quantity-controller, .item-quantity{
+  height: 40px;
+}
+
+
+
+#item-quantity-container{
+  display: inline-block;
+
+
+  span{
+    width: 30px;
+    background-color: lightblue;
+  }
+
+  #minus{
+    border-radius: 5px 0 0 5px;
+  }
+  #plus{
+    border-radius: 0 5px 5px 0;
+  }
+
+
+}
+
+  button{
+    width: 30px;
+    cursor: pointer;
+    background-color: inherit;
+    border-style: none;
+    background-color: lightblue;
+  }
+
+.item-quantity-controller{
+  width: 30px;
+    cursor: pointer;
+    background-color: inherit;
+    border-style: none;
+    background-color: lightblue;
+  &:hover{
+    background-color: lightcoral;
+  }
+}
