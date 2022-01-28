@@ -1,43 +1,102 @@
-.item-quantity-controller, .item-quantity{
+@import "../../../../global-styling";
+
+h4 {
+  color: $main-orange-color;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.headline{
+  margin: 0;
+  margin-top: 10px;
+  font-size: 32px;
+  font-family: sans-serif;
+    font-weight: 600;
+}
+
+section {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 70px;
+}
+
+.item-quantity-controller,
+.item-quantity {
   height: 40px;
 }
 
-
-
-#item-quantity-container{
+#item-quantity-container {
   display: inline-block;
 
-
-  span{
+  span {
     width: 30px;
     background-color: lightblue;
   }
 
-  #minus{
+  #minus {
     border-radius: 5px 0 0 5px;
   }
-  #plus{
+  #plus {
     border-radius: 0 5px 5px 0;
   }
-
-
 }
 
-  button{
-    width: 30px;
-    cursor: pointer;
-    background-color: inherit;
-    border-style: none;
-    background-color: lightblue;
-  }
-
-.item-quantity-controller{
+button {
   width: 30px;
-    cursor: pointer;
-    background-color: inherit;
-    border-style: none;
-    background-color: lightblue;
-  &:hover{
-    background-color: lightcoral;
+  cursor: pointer;
+  background-color: inherit;
+  border-style: none;
+  background-color: $quantity-button-gray;
+  font-size: 22px;
+}
+
+.item-quantity-controller {
+  width: 30px;
+  cursor: pointer;
+  color: $main-orange-color;
+  border-style: none;
+  background-color: $quantity-button-gray;
+  &:hover {
+    background-color: #dfdfdf;
   }
+}
+
+.add-to-cart-button {
+  color: #ffffff;
+  background-color: $main-orange-color;
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+.item-description{
+  color: $discounted-price;
+}
+
+.buttons-container{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#price{
+  font-size: 27px;
+}
+
+#discount-percentage{
+  background-color: $discount-percentage-orange;
+  padding: 2px 4px;
+    border-radius: 5px;
+    color:$main-orange-color;
+}
+
+.price-container{
+  display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
 }

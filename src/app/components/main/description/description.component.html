@@ -1,18 +1,18 @@
 <section>
   <h4>SNEAKER COMPANY</h4>
-  <h1>Fall Limited Edition Sneakers</h1>
-  <p>
+  <p class="headline">Fall Limited Edition Sneakers</p>
+  <p class="item-description" >
     These low-profile sneakers are your perfect casual wear companion. Featuring
     a durable subber outer sole, they'll withstand everything the weather an
     offer
   </p>
-  <div><span>$125</span></div>
-  <div>
+  <div class="price-container"><span id="price">$125</span><span id="discount-percentage">50%</span></div>
+  <div class="buttons-container">
     <div id="item-quantity-container">
-      <button id="minus" class="item-quantity-controller">-</button>
-      <button class="item-quantity">0</button>
-      <button id="plus" class="item-quantity-controller">+</button>
+      <button [disabled]="quantity==0" (click)="substractOneProduct()" id="minus" class="item-quantity-controller">-</button>
+      <button class="item-quantity">{{quantity}}</button>
+      <button (click)="addOneProduct()" id="plus" class="item-quantity-controller">+</button>
     </div>
-    <button>Add to cart</button>
+    <button class="add-to-cart-button">Add to cart</button>
   </div>
 </section>
