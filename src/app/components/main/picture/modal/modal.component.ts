@@ -18,6 +18,23 @@ export class ModalComponent implements OnInit {
   changeImage(e: any) {
     this.imageSelected = e.target.id;
     this.imageSrc = `../../../../assets/images/image-product-${e.target.id}.jpg`;
-    console.log(this.imageSelected);
+  }
+
+  selectNextImage(){
+    if(this.imageSelected === 4){
+      this.imageSelected = 1;
+    }else{
+     this.imageSelected += 1;
+    }
+    this.imageSrc = `../../../../assets/images/image-product-${this.imageSelected}.jpg`
+  }
+
+  selectPreviousImage(){
+    if(this.imageSelected === 1){
+      this.imageSelected = 4;
+    }else{
+     this.imageSelected -= 1;
+    }
+    this.imageSrc = `../../../../assets/images/image-product-${this.imageSelected}.jpg`
   }
 }
