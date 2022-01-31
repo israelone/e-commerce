@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  showModal:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleModal(){
+    console.log(this.showModal);
+    this.showModal = !this.showModal;
+    console.log(this.showModal);
   }
 
 }
