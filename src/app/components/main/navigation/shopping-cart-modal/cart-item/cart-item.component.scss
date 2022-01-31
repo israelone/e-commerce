@@ -1,0 +1,28 @@
+img{
+  width: 38px;
+}
+
+#product-image{
+  border-radius: 3px;
+}
+
+div{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p{
+  margin: 0;
+  color: gray;
+}
+
+span{
+  color: black;
+}
+
+#trash-icon{
+  width: 12px;
+  cursor: pointer;
+}

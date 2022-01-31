@@ -1,0 +1,46 @@
+@import '../../../../../global-styling';
+
+#modal-container{
+  position: absolute;
+  width: 320px;
+  background-color: white;
+  border-radius: 15px;
+  top: 69px;
+  right: 40px;
+  -webkit-box-shadow: 0px 6px 30px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 6px 30px -13px rgba(0,0,0,0.75);
+box-shadow: 0px 6px 30px -13px rgba(0,0,0,0.75);
+}
+
+h4{
+  margin-left: 12px;
+}
+
+button{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: $main-orange-color;
+  font-weight: bold;
+}
+
+#bottom-section{
+  padding: 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#items-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+hr{
+  border-color: white;
+}

@@ -8,6 +8,8 @@ import { PictureComponent } from './components/main/picture/picture.component';
 import { NavigationComponent } from './components/main/navigation/navigation.component';
 import { ContentComponent } from './components/main/content/content.component';
 import { ModalComponent } from './components/main/picture/modal/modal.component';
+import { ShoppingCartModalComponent } from './components/main/navigation/shopping-cart-modal/shopping-cart-modal.component';
+import { CartItemComponent } from './components/main/navigation/shopping-cart-modal/cart-item/cart-item.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ModalComponent } from './components/main/picture/modal/modal.component'
     PictureComponent,
     NavigationComponent,
     ContentComponent,
-    ModalComponent
+    ModalComponent,
+    ShoppingCartModalComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
