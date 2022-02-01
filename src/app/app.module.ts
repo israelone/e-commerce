@@ -10,6 +10,7 @@ import { ContentComponent } from './components/main/content/content.component';
 import { ModalComponent } from './components/main/picture/modal/modal.component';
 import { ShoppingCartModalComponent } from './components/main/navigation/shopping-cart-modal/shopping-cart-modal.component';
 import { CartItemComponent } from './components/main/navigation/shopping-cart-modal/cart-item/cart-item.component';
+import { ProductsService } from './services/products/products.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { CartItemComponent } from './components/main/navigation/shopping-cart-mo
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
