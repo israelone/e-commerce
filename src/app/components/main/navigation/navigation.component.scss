@@ -3,7 +3,7 @@ nav {
   width: 80%;
   margin: 0 auto;
   border-bottom: 1px solid #cbcbcb;
-  height: 80px;
+  height: 100px;
   #logo{
     height: 20px;
     margin: auto 0;
@@ -21,9 +21,9 @@ nav {
       cursor: pointer;
       align-items:center;
       border-bottom:4px solid transparent;
+      box-sizing: border-box;
       &:hover{
         border-bottom: 4px solid orange;
-        margin-bottom: -1px;
       }
     }
   }
