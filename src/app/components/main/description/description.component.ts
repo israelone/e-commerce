@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-description',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./description.component.scss']
 })
 export class DescriptionComponent implements OnInit {
+  @Input() currentProduct:any;
   quantity:number=0;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.currentProduct);
   }
 
   addOneProduct(){

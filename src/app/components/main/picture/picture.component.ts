@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/services/products/products.service';
+//TODO fix image selection
 @Component({
   selector: 'app-picture',
   templateUrl: './picture.component.html',
   styleUrls: ['./picture.component.scss'],
 })
 export class PictureComponent implements OnInit {
+  @Input() currentProduct:any;
   imageSrc: string = `../../../../assets/images/image-product-1.jpg`;
   imageSelected: number = 1;
   showModal:boolean = false
-  constructor() {}
+  products:any;
+
+  constructor(private userNameService : ProductsService) {
+    this.products=this.userNameService.getProducts();
+  console.log(this.products);
+  }
 
   ngOnInit(): void {}
 

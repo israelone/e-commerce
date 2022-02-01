@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProductsService } from 'src/app/services/products/products.service';
+//TODO change service name
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  styleUrls: ['./content.component.scss'],
 })
 export class ContentComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  products: any;
+  currentProduct:any;
+  constructor(private userNameService: ProductsService) {
+    this.products = this.userNameService.getProducts();
+    this.currentProduct=this.products[0];
+    console.log(this.currentProduct);
   }
 
+  ngOnInit(): void {}
 }
