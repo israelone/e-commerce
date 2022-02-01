@@ -20,6 +20,7 @@ nav {
       color: gray;
       cursor: pointer;
       align-items:center;
+      border-bottom:4px solid transparent;
       &:hover{
         border-bottom: 4px solid orange;
         margin-bottom: -1px;
