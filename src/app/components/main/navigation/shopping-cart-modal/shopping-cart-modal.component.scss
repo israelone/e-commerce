@@ -45,3 +45,14 @@ button{
 hr{
   border-color: white;
 }
+
+.empty-cart{
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  div{
+    color:gray;
+    font-weight: bold;
+  }
+}

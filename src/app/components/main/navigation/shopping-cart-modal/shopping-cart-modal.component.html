@@ -1,13 +1,15 @@
 <div id="modal-container">
   <div id="top-section">
-  <h4>Cart</h4>
+    <h4>Cart</h4>
   </div>
-  <hr>
-  <div id="bottom-section">
-  <div id="items-container">
-    <app-cart-item></app-cart-item>
-    <app-cart-item></app-cart-item>
+  <hr />
+  <div id="bottom-section" [ngClass]="{'empty-cart': products.length === 0}" [ngSwitch]="products.length > 0">
+    <ng-container *ngSwitchCase="true">
+      <div id="items-container" *ngFor="let product of products">
+        <app-cart-item [product]="product"></app-cart-item>
+      </div>
+      <button>Checkout</button>
+    </ng-container>
+    <div id="empty-cart" *ngSwitchDefault>Your cart is empty.</div>
   </div>
-  <button>Checkout</button>
-</div>
 </div>
