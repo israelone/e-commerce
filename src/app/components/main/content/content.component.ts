@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products/products.service';
-//TODO change service name
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
