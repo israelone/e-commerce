@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products/products.service';
-//TODO fix image selection
 @Component({
   selector: 'app-picture',
   templateUrl: './picture.component.html',
@@ -8,17 +7,16 @@ import { ProductsService } from 'src/app/services/products/products.service';
 })
 export class PictureComponent implements OnInit {
   @Input() currentProduct:any;
-  imageSrc: string = `../../../../assets/images/image-product-1.jpg`;
-  imageSelected: number = 1;
+  mainImageSrc: string = ''
+  imageSelected: number = 0;
   showModal:boolean = false
   products:any;
 
-  constructor(private userNameService : ProductsService) {
-    this.products=this.userNameService.getProducts();
-  console.log(this.products);
+  constructor(private productsService : ProductsService) {
+    this.products=this.productsService.getProducts();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {this.mainImageSrc = this.currentProduct.mainImages[0].src;}
 
   toggleModal(){
     if(this.showModal){
@@ -29,7 +27,7 @@ export class PictureComponent implements OnInit {
   }
 
   changeImage(e: any) {
-    this.imageSelected = e.target.id;
-    this.imageSrc = `../../../../assets/images/image-product-${e.target.id}.jpg`;
+    this.imageSelected = parseInt(e.target.id);
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
   }
 }

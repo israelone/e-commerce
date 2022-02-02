@@ -1,10 +1,10 @@
 <section>
-  <img id="main-image" src={{currentProduct.mainImage.src}} alt="main-image" (click)="toggleModal()"/>
+  <img id="main-image" src={{mainImageSrc}} alt="main-image" (click)="toggleModal()"/>
   <div class="thumbnails-container" >
     <div
       class="thumbnail-container"
-      [ngClass]="{ selected: imageSelected == 1 }"
       *ngFor="let thumbnail of currentProduct.thumbnails"
+      [ngClass]="{ selected: imageSelected == thumbnail.id }"
     >
       <img
         class="thumbnail"
@@ -16,4 +16,4 @@
     </div>
   </div>
 </section>
-<app-modal (toggleModal)="toggleModal()" *ngIf="showModal"></app-modal>
+<app-modal [currentProduct]="currentProduct" (toggleModal)="toggleModal()" *ngIf="showModal"></app-modal>

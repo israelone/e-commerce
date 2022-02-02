@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,34 +7,38 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  @Input() currentProduct:any;
   @Output() toggleModal = new EventEmitter<any>();
-  imageSrc: string = `../../../../assets/images/image-product-1.jpg`;
-  imageSelected: number = 1;
+  mainImageSrc: string = "";
+  imageSelected: number = 0;
   showModal:boolean = false
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.mainImageSrc = this.currentProduct.mainImages[0].src;
+  }
 
   changeImage(e: any) {
-    this.imageSelected = e.target.id;
-    this.imageSrc = `../../../../assets/images/image-product-${e.target.id}.jpg`;
+    this.imageSelected = parseInt(e.target.id);
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
   }
 
   selectNextImage(){
-    if(this.imageSelected === 4){
-      this.imageSelected = 1;
+    if(this.imageSelected === 3){
+      this.imageSelected = 0;
     }else{
      this.imageSelected += 1;
     }
-    this.imageSrc = `../../../../assets/images/image-product-${this.imageSelected}.jpg`
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
   }
 
   selectPreviousImage(){
-    if(this.imageSelected === 1){
-      this.imageSelected = 4;
+    if(this.imageSelected === 0){
+      this.imageSelected = 3;
     }else{
      this.imageSelected -= 1;
     }
-    this.imageSrc = `../../../../assets/images/image-product-${this.imageSelected}.jpg`
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
   }
+
 }
