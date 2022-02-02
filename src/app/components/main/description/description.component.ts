@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart/cart.service';
 
 @Component({
   selector: 'app-description',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DescriptionComponent implements OnInit {
   @Input() currentProduct:any;
   quantity:number=0;
-  constructor() { }
+  constructor(private cartService : CartService) { }
 
   ngOnInit(): void {
     console.log(this.currentProduct);
@@ -20,6 +21,11 @@ export class DescriptionComponent implements OnInit {
 
   substractOneProduct(){
     this.quantity-=1;
+  }
+
+  addProductToCart(){
+    this.cartService.addProduct(this.currentProduct, this.quantity);
+    this.quantity=0;
   }
 
 }

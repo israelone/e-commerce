@@ -12,6 +12,6 @@
       <button class="item-quantity">{{quantity}}</button>
       <button (click)="addOneProduct()" id="plus" class="item-quantity-controller"><img src="../../../../assets/icons/icon-plus.svg"></button>
     </div>
-    <button class="add-to-cart-button"><img src="../../../../assets/icons/icon-cart.svg">Add to cart</button>
+    <button (click)="addProductToCart()" class="add-to-cart-button" [disabled]="quantity <= 0"><img src="../../../../assets/icons/icon-cart.svg" >Add to cart</button>
   </div>
 </section>
