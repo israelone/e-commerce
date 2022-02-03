@@ -125,6 +125,30 @@ button {
   }
 }
 
-.item-quantity{
+.item-quantity {
   width: 50px;
+}
+@media screen and (max-width: 375px) {
+  section {
+    padding: 20px;
+  }
+  .buttons-container {
+    flex-direction: column;
+  }
+  .add-to-cart-button {
+    width: 100%;
+  }
+  .item-quantity-controller,
+  .item-quantity {
+    width: 33.3%;
+  }
+
+  #minus {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  #plus {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
 }

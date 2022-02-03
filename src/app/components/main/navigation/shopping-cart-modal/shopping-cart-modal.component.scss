@@ -56,3 +56,11 @@ hr{
     font-weight: bold;
   }
 }
+
+@media screen and (max-width: 375px) {
+  #modal-container{
+    width: 95%;
+    top: 74px;
+    right: 10px;
+  }
+}

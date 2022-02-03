@@ -1,8 +1,21 @@
-section{
+section {
   display: flex;
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
- app-picture, app-description{
-   width: 50%;
- }
+app-picture,
+app-description {
+  width: 50%;
+}
+
+@media screen and (max-width: 375px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  app-picture,
+  app-description {
+    width: initial;
+  }
+}

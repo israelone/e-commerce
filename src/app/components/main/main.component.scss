@@ -5,3 +5,8 @@ div{
   gap: 12%;
 }
 
+@media screen and (max-width: 375px) {
+ div{
+   gap: 0;
+ }
+}

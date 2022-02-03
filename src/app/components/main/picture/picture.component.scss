@@ -1,11 +1,11 @@
-section{
+section {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-img{
+img {
   border-radius: 18px;
   cursor: pointer;
 }
@@ -20,22 +20,32 @@ img{
   width: 82px;
 }
 
-.thumbnail-container{
- border-radius: 18px;
+.thumbnail-container {
+  border-radius: 18px;
 }
 .selected {
   outline: 2px solid orange;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  img{
+  img {
     opacity: 0.5;
   }
 }
 
-.thumbnails-container{
+.thumbnails-container {
   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 380px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 380px;
+}
+
+@media screen and (max-width: 375px) {
+  .thumbnails-container {
+    display: none;
+  }
+
+  img {
+    border-radius: initial;
+  }
 }
