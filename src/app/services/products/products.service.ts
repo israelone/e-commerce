@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Product } from 'src/app/interfaces/product';
 
 @Injectable()
 export class ProductsService {
-  products = [
+  products:Product[]= [
     {
       name: 'Sneaker Company',
       header:"Fall Limited Edition Sneakers",
@@ -15,24 +16,28 @@ export class ProductsService {
       mainImages: [{
         src: 'assets/images/image-product-1.jpg',
         alt: '',
+        id:0
       },
       {
         src: 'assets/images/image-product-2.jpg',
         alt: '',
+        id:1
       },
       {
         src: 'assets/images/image-product-3.jpg',
         alt: '',
+        id:2
       },
       {
         src: 'assets/images/image-product-4.jpg',
         alt: '',
+        id:3
       }],
       thumbnails: [
-        { image: 'assets/images/image-product-1-thumbnail.jpg', alt: '', id:"0" },
-        { image: 'assets/images/image-product-2-thumbnail.jpg', alt: '', id:"1" },
-        { image: 'assets/images/image-product-3-thumbnail.jpg', alt: '', id:"2" },
-        { image: 'assets/images/image-product-4-thumbnail.jpg', alt: '', id:"3" },
+        { src: 'assets/images/image-product-1-thumbnail.jpg', alt: '', id:0 },
+        { src: 'assets/images/image-product-2-thumbnail.jpg', alt: '', id:1 },
+        { src: 'assets/images/image-product-3-thumbnail.jpg', alt: '', id:2 },
+        { src: 'assets/images/image-product-4-thumbnail.jpg', alt: '', id:4 },
       ],
     },
   ];
