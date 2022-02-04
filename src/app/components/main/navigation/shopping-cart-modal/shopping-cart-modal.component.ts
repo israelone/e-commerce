@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { ProductsService } from 'src/app/services/products/products.service';
 
@@ -9,10 +10,9 @@ import { ProductsService } from 'src/app/services/products/products.service';
 })
 export class ShoppingCartModalComponent implements OnInit {
   @Output() toggleModal = new EventEmitter<any>();
-  products:any;
+  products:Product[];
   constructor(private cartService:CartService) {
     this.products=cartService.getCart();
-    console.log(this.products);
    }
 
   ngOnInit(): void {

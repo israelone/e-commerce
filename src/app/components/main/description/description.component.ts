@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
 import { CartService } from 'src/app/services/cart/cart.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { CartService } from 'src/app/services/cart/cart.service';
   styleUrls: ['./description.component.scss']
 })
 export class DescriptionComponent implements OnInit {
-  @Input() currentProduct:any;
+  @Input() currentProduct!:Product;
   quantity:number=0;
   constructor(private cartService : CartService) { }
 

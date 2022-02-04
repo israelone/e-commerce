@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
 
 @Component({
   selector: 'app-modal',
@@ -7,7 +8,7 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-  @Input() currentProduct:any;
+  @Input() currentProduct!:Product;
   @Output() toggleModal = new EventEmitter<any>();
   mainImageSrc: string = "";
   imageSelected: number = 0;

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Product } from 'src/app/interfaces/product';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  cart: any = [];
+  cart: Product[] = [];
 
-  addProduct(product: any, quantity: number) {
+  addProduct(product: Product, quantity: number) {
     const includes = this.cart.indexOf(product);
     if (includes === -1) {
       product.quantity = quantity;

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
 import { ProductsService } from 'src/app/services/products/products.service';
 @Component({
   selector: 'app-picture',
@@ -6,11 +7,11 @@ import { ProductsService } from 'src/app/services/products/products.service';
   styleUrls: ['./picture.component.scss'],
 })
 export class PictureComponent implements OnInit {
-  @Input() currentProduct:any;
+  @Input() currentProduct!:Product;
   mainImageSrc: string = ''
   imageSelected: number = 0;
   showModal:boolean = false
-  products:any;
+  products:Product[];
 
   constructor(private productsService : ProductsService) {
     this.products=this.productsService.getProducts();
