@@ -18,7 +18,10 @@ export class CartService {
     }
   }
 
-  removeProduct() {}
+  removeProduct(productId:number) {
+    const result = this.cart.findIndex(product=>product.id==productId);
+    this.cart.splice(result, 1);
+  }
 
   getCart() {
     return this.cart;

@@ -1,5 +1,5 @@
 <div>
   <img id="product-image" src={{product.mainImages[0].src}}>
   <p>{{product.header}}<br>${{product.price}} x {{product.quantity}} <span><strong>{{product.price * product.quantity}}</strong></span></p>
-  <img id="trash-icon" src="../../../../../../assets/icons/icon-delete.svg">
+  <img (click)="removeProduct()" id="trash-icon" src="../../../../../../assets/icons/icon-delete.svg">
 </div>
