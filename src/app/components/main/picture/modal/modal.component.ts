@@ -11,7 +11,7 @@ export class ModalComponent implements OnInit {
   @Input() currentProduct!:Product;
   @Output() toggleModal = new EventEmitter<any>();
   mainImageSrc: string = "";
-  imageSelected: number = 0;
+  imageSelected: number = 1;
   showModal:boolean = false
   constructor() {}
 
@@ -21,25 +21,25 @@ export class ModalComponent implements OnInit {
 
   changeImage(e: any) {
     this.imageSelected = parseInt(e.target.id);
-    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected-1].src;
   }
 
   selectNextImage(){
-    if(this.imageSelected === 3){
-      this.imageSelected = 0;
+    if(this.imageSelected === 4){
+      this.imageSelected = 1;
     }else{
      this.imageSelected += 1;
     }
-    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected - 1].src;
   }
 
   selectPreviousImage(){
-    if(this.imageSelected === 0){
-      this.imageSelected = 3;
+    if(this.imageSelected === 1){
+      this.imageSelected = 4;
     }else{
      this.imageSelected -= 1;
     }
-    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected - 1].src;
   }
 
 }

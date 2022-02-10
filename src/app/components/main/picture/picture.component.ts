@@ -8,8 +8,8 @@ import { ProductsService } from 'src/app/services/products/products.service';
 })
 export class PictureComponent implements OnInit {
   @Input() currentProduct!:Product;
-  mainImageSrc: string = ''
-  imageSelected: number = 0;
+  mainImageSrc: string = "";
+  imageSelected: number = 1;
   showModal:boolean = false
   products:Product[];
 
@@ -28,7 +28,7 @@ export class PictureComponent implements OnInit {
   }
 
   changeImage(e: any) {
-    this.imageSelected = parseInt(e.target.id);
-    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected].src;
+    this.imageSelected = e.target.id;
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected - 1].src;
   }
 }
