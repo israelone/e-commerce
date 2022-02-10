@@ -1,5 +1,14 @@
 <section>
-  <img id="main-image" src={{mainImageSrc}} alt="main-image" (click)="toggleModal()"/>
+  <div id="main-image-container">
+    <button (click)="selectPreviousImage()" id="previous-button">
+      <img src="../../../../../assets/icons/icon-previous.svg" />
+    </button>
+    <button (click)="selectNextImage()" id="next-button">
+      <img src="../../../../../assets/icons/icon-next.svg" />
+    </button>
+   <img id="main-image" src={{mainImageSrc}} alt="main-image" (click)="toggleModal()"/>
+  </div>
+
   <div class="thumbnails-container" >
     <div
       class="thumbnail-container"
@@ -16,4 +25,4 @@
     </div>
   </div>
 </section>
-<app-modal [currentProduct]="currentProduct" (toggleModal)="toggleModal()" *ngIf="showModal"></app-modal>
+<app-modal [currentProduct]="currentProduct" [imageSelected]="imageSelected" (toggleModal)="toggleModal()" *ngIf="showModal"></app-modal>

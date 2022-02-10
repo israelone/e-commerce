@@ -40,6 +40,10 @@ img {
   width: 380px;
 }
 
+button {
+  display: none;
+}
+
 @media screen and (max-width: 375px) {
   .thumbnails-container {
     display: none;
@@ -47,5 +51,31 @@ img {
 
   img {
     border-radius: initial;
+  }
+  button {
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 100%;
+    margin: 0;
+    outline: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 6px 6px 3px 3px;
+    text-align: center;
+  }
+
+  #main-image-container {
+    position: relative;
+  }
+  #next-button {
+    top: calc(50% - 20px);
+    right: 23px;
+  }
+
+  #previous-button {
+    top: calc(50% - 20px);
+    left: 23px;
   }
 }
