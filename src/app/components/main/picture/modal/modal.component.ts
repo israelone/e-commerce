@@ -11,12 +11,12 @@ export class ModalComponent implements OnInit {
   @Input() currentProduct!:Product;
   @Output() toggleModal = new EventEmitter<any>();
   mainImageSrc: string = "";
-  imageSelected: number = 1;
+  @Input() imageSelected!: number;
   showModal:boolean = false
   constructor() {}
 
   ngOnInit(): void {
-    this.mainImageSrc = this.currentProduct.mainImages[0].src;
+    this.mainImageSrc = this.currentProduct.mainImages[this.imageSelected - 1].src;
   }
 
   changeImage(e: any) {
