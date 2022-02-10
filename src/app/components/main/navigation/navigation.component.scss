@@ -109,7 +109,9 @@ nav {
     gap: 40px;
     left: -71%;
     transition: all ease 0.5s;
+    z-index: 2;
   }
+
   .show {
     left: 0;
   }
