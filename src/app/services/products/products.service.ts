@@ -6,6 +6,7 @@ import { Product } from 'src/app/interfaces/product';
 export class ProductsService {
   products:Product[]= [
     {
+      id:1,
       name: 'Sneaker Company',
       header:"Fall Limited Edition Sneakers",
       description:

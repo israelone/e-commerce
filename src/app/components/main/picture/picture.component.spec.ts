@@ -21,6 +21,7 @@ describe('PictureComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PictureComponent);
     currentProduct={
+      id:1,
       name: 'Sneaker Company',
       header:"Fall Limited Edition Sneakers",
       description:
