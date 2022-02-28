@@ -1,28 +1,29 @@
 # ECommerce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2. 
 
-## Development server
+Design provided by https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Purpose
 
-## Code scaffolding
+To practice and demonstrate skills in Angular Framework.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## What it does?
 
-## Build
+Allows a user to view a product images and description. To navigate images you can click on each of the thumbnail or use the navigation arrows (available on modal or mobile device)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+User can select the quantity to be added to shopping cart, view shopping and delete items from shopping cart.
 
-## Running unit tests
+### Laptop Screen
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://user-images.githubusercontent.com/22969168/155993376-a3152493-7635-40a6-90d9-3a3fbcb346b4.mp4
 
-## Running end-to-end tests
+### Mobile Device Screen
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+https://user-images.githubusercontent.com/22969168/155993385-7beadd9a-e3ad-4326-8b00-addb6a2a24c8.mp4
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# e-commerce
+## Live
+
+https://israelone.github.io/e-commerce/ 
+
