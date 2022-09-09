@@ -2,15 +2,15 @@
   <div>
     <img
       id="close-button"
-      src="../../../../../assets/icons/icon-close.svg"
+      src="assets//icons/icon-close.svg"
       (click)="toggleModal.emit($event)"
     />
     <div>
       <button (click)="selectPreviousImage()" id="previous-button">
-        <img src="../../../../../assets/icons/icon-previous.svg" />
+        <img src="assets//icons/icon-previous.svg" />
       </button>
       <button (click)="selectNextImage()" id="next-button">
-        <img src="../../../../../assets/icons/icon-next.svg" />
+        <img src="assets//icons/icon-next.svg" />
       </button>
       <img
         id="main-image"
@@ -19,21 +19,20 @@
         (click)="toggleModal.emit($event)"
       />
     </div>
-  <div class="thumbnails-container" >
-    <div
-      class="thumbnail-container"
-      *ngFor="let thumbnail of currentProduct.thumbnails"
-      [ngClass]="{ selected: imageSelected == thumbnail.id }"
-    >
-      <img
-        class="thumbnail"
-        src={{thumbnail.src}}
-        alt=""
-        id={{thumbnail.id}}
-        (click)="changeImage($event)"
-      />
+    <div class="thumbnails-container">
+      <div
+        class="thumbnail-container"
+        *ngFor="let thumbnail of currentProduct.thumbnails"
+        [ngClass]="{ selected: imageSelected == thumbnail.id }"
+      >
+        <img
+          class="thumbnail"
+          src="{{ thumbnail.src }}"
+          alt=""
+          id="{{ thumbnail.id }}"
+          (click)="changeImage($event)"
+        />
+      </div>
     </div>
   </div>
-  </div>
-
 </section>

@@ -1,17 +1,41 @@
 <section>
-  <h4>{{currentProduct.name | uppercase}}</h4>
-  <p class="headline">{{currentProduct.header}}</p>
-  <p class="item-description" >
-    {{currentProduct.description}}
+  <h4>{{ currentProduct.name | uppercase }}</h4>
+  <p class="headline">{{ currentProduct.header }}</p>
+  <p class="item-description">
+    {{ currentProduct.description }}
   </p>
-  <div class="price-container"><span id="price">$125</span><span id="discount-percentage">{{currentProduct.discount}}%</span></div>
-  <div class="original-price-container"><span>${{currentProduct.price}}.00</span></div>
+  <div class="price-container">
+    <span id="price">$125</span
+    ><span id="discount-percentage">{{ currentProduct.discount }}%</span>
+  </div>
+  <div class="original-price-container">
+    <span>${{ currentProduct.price }}.00</span>
+  </div>
   <div class="buttons-container">
     <div id="item-quantity-container">
-      <button [disabled]="quantity==0" (click)="substractOneProduct()" id="minus" class="item-quantity-controller"><img src="../../../../assets/icons/icon-minus.svg"></button>
-      <button class="item-quantity">{{quantity}}</button>
-      <button (click)="addOneProduct()" id="plus" class="item-quantity-controller"><img src="../../../../assets/icons/icon-plus.svg"></button>
+      <button
+        [disabled]="quantity == 0"
+        (click)="substractOneProduct()"
+        id="minus"
+        class="item-quantity-controller"
+      >
+        <img src="assets//icons/icon-minus.svg" />
+      </button>
+      <button class="item-quantity">{{ quantity }}</button>
+      <button
+        (click)="addOneProduct()"
+        id="plus"
+        class="item-quantity-controller"
+      >
+        <img src="assets//icons/icon-plus.svg" />
+      </button>
     </div>
-    <button (click)="addProductToCart()" class="add-to-cart-button" [disabled]="quantity <= 0"><img src="../../../../assets/icons/icon-cart.svg" >Add to cart</button>
+    <button
+      (click)="addProductToCart()"
+      class="add-to-cart-button"
+      [disabled]="quantity <= 0"
+    >
+      <img src="assets//icons/icon-cart.svg" />Add to cart
+    </button>
   </div>
 </section>

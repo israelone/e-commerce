@@ -1,15 +1,20 @@
 <section>
   <div id="main-image-container">
     <button (click)="selectPreviousImage()" id="previous-button">
-      <img src="../../../../../assets/icons/icon-previous.svg" />
+      <img src="assets//icons/icon-previous.svg" />
     </button>
     <button (click)="selectNextImage()" id="next-button">
-      <img src="../../../../../assets/icons/icon-next.svg" />
+      <img src="assets//icons/icon-next.svg" />
     </button>
-   <img id="main-image" src={{mainImageSrc}} alt="main-image" (click)="toggleModal()"/>
+    <img
+      id="main-image"
+      src="{{ mainImageSrc }}"
+      alt="main-image"
+      (click)="toggleModal()"
+    />
   </div>
 
-  <div class="thumbnails-container" >
+  <div class="thumbnails-container">
     <div
       class="thumbnail-container"
       *ngFor="let thumbnail of currentProduct.thumbnails"
@@ -17,12 +22,17 @@
     >
       <img
         class="thumbnail"
-        src={{thumbnail.src}}
+        src="{{ thumbnail.src }}"
         alt=""
-        id={{thumbnail.id}}
+        id="{{ thumbnail.id }}"
         (click)="changeImage($event)"
       />
     </div>
   </div>
 </section>
-<app-modal [currentProduct]="currentProduct" [imageSelected]="imageSelected" (toggleModal)="toggleModal()" *ngIf="showModal"></app-modal>
+<app-modal
+  [currentProduct]="currentProduct"
+  [imageSelected]="imageSelected"
+  (toggleModal)="toggleModal()"
+  *ngIf="showModal"
+></app-modal>

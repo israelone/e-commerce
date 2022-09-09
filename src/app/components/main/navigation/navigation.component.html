@@ -1,15 +1,11 @@
 <nav>
-  <img
-    id="menu"
-    (click)="toggleMenu()"
-    src="../../../../assets//icons/icon-menu.svg"
-  />
-  <img id="logo" src="../../../../assets/icons/logo.svg" />
+  <img id="menu" (click)="toggleMenu()" src="assets//icons/icon-menu.svg" />
+  <img id="logo" src="assets//icons/logo.svg" />
   <div class="navigation-items-container" [ngClass]="{ show: showMenu }">
     <img
       id="close-button"
       (click)="toggleMenu()"
-      src="../../../../assets/icons/icon-close.svg"
+      src="assets//icons/icon-close.svg"
     />
     <ul>
       <li>Collections</li>
@@ -20,14 +16,10 @@
     </ul>
   </div>
   <div id="left-section">
-    <img
-      id="shopping-cart"
-      src="../../../../assets//icons/icon-cart.svg"
-      alt="cart"
-    />
+    <img id="shopping-cart" src="assets//icons/icon-cart.svg" alt="cart" />
     <img
       id="avatar"
-      src="../../../../assets/images/image-avatar.png"
+      src="assets//images/image-avatar.png"
       alt="avatar"
       (click)="toggleModal()"
     />
