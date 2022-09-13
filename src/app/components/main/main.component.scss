@@ -1,12 +1,12 @@
-div{
+div {
   display: flex;
   flex-direction: column;
   height: 100%;
   gap: 12%;
 }
 
-@media screen and (max-width: 375px) {
- div{
-   gap: 0;
- }
+@media screen and (max-width: 500px) {
+  div {
+    gap: 0;
+  }
 }

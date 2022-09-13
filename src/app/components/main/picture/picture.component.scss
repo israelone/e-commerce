@@ -44,7 +44,7 @@ button {
   display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .thumbnails-container {
     display: none;
   }
@@ -71,11 +71,11 @@ button {
   }
   #next-button {
     top: calc(50% - 20px);
-    right: 23px;
+    right: -18px;
   }
 
   #previous-button {
     top: calc(50% - 20px);
-    left: 23px;
+    left: -18px;
   }
 }
